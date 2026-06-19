@@ -10,21 +10,21 @@
     <packaging>jar</packaging>
 
     <properties>
-        <paper-api.version>1.20.4-R0.1-SNAPSHOT</paper-api.version>
-        <jetty.version>12.0.17</jetty.version>
+        <paper-api.version>1.21.11-R0.1-SNAPSHOT</paper-api.version>
+        <jetty.version>12.1.11-SNAPSHOT</jetty.version>
         <prometheus-client.version>0.16.0</prometheus-client.version>
-        <json-path.version>2.9.0</json-path.version>
-        <junit.jupiter.version>5.12.0</junit.jupiter.version>
-        <org.mockito.version>5.15.2</org.mockito.version>
-        <assertj.version>3.27.3</assertj.version>
+        <json-path.version>3.0.0</json-path.version>
+        <junit.jupiter.version>6.2.0-SNAPSHOT</junit.jupiter.version>
+        <org.mockito.version>5.23.1-SNAPSHOT</org.mockito.version>
+        <assertj.version>4.0.0-SNAPSHOT</assertj.version>
         <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
-        <maven-surefire-plugin.version>3.5.2</maven-surefire-plugin.version>
-        <maven-assembly-plugin.version>3.7.1</maven-assembly-plugin.version>
+        <maven-surefire-plugin.version>3.6.0-M1</maven-surefire-plugin.version>
+        <maven-assembly-plugin.version>3.8.0</maven-assembly-plugin.version>
         <maven-jgitflow-plugin.version>1.21.0</maven-jgitflow-plugin.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <kotlin.version>2.1.10</kotlin.version>
+        <kotlin.version>2.4.0</kotlin.version>
     </properties>
 
     <repositories>
@@ -89,7 +89,7 @@
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
-            <version>5.5.1</version>
+            <version>6.0.0</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -101,6 +101,13 @@
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-test</artifactId>
             <version>${kotlin.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mockbukkit.mockbukkit</groupId>
+            <artifactId>mockbukkit-v1.21</artifactId>
+            <version>4.108.0</version>
             <scope>test</scope>
         </dependency>
 

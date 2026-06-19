@@ -17,6 +17,9 @@ import java.util.stream.Collectors;
 import java.util.stream.LongStream;
 import java.util.stream.Stream;
 
+import org.mockbukkit.mockbukkit.MockBukkit;
+import org.junit.jupiter.api.AfterEach;
+
 class VillagersTest {
 
 	private static final String VILLAGERS_METRIC_NAME = "mc_villagers_total";
@@ -28,12 +31,19 @@ class VillagersTest {
 
 	@BeforeEach
 	void beforeEachTest() {
+    MockBukkit.mock();
+
 		REGISTRY.clear();
 		Plugin plugin = mock(Plugin.class);
 		villagersMetric = new Villagers(plugin);
 		villagersMetric.enable();
 		world = mock(World.class);
 	}
+
+  @AfterEach
+  void afterEachTest() {
+    MockBukkit.unmock();
+  }
 
 	@Test
 	void givenVillagersExpectCorrectCount() {
